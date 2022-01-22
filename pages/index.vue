@@ -15,7 +15,7 @@
         </h3>
       </div>
       <div class="jokes">
-        <h4 v-for="joke in jokes" :key="joke">{{ joke }}</h4>
+        <h4>{{ joke }}</h4>
         <p>Refresh the page for a new joke.</p>
       </div>
     </section>
@@ -23,13 +23,15 @@
 </template>
 
 <script>
-import json from '@/content/jokes/jokes.json'
-
 export default {
-  data() {
-    return {
-      jokes: json.jokes,
+  async asyncData({ $content, params, error }) {
+    let joke
+    try {
+      joke = await $content('jokes', params.joke).fetch()
+    } catch (e) {
+      error({ message: 'Joke not found' })
     }
+    return { joke }
   },
 }
 </script>
@@ -55,7 +57,7 @@ export default {
 }
 
 .info {
-  @apply flex bg-primary-700 text-white place-content-center place-items-center;
+  @apply flex bg-primary-700 text-white place-content-center place-items-stretch;
 }
 
 .info div {
