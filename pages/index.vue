@@ -14,9 +14,26 @@
           work environment while providing broadcast-quality sound.
         </h3>
       </div>
+      <div class="jokes">
+        <h4 v-for="joke in jokes" :key="joke">{{ joke }}</h4>
+        <p>Refresh the page for a new joke.</p>
+      </div>
     </section>
   </main>
 </template>
+
+<script>
+import json from '@/content/site/jokes.json'
+
+export default {
+  data() {
+    return {
+      jokes: json.jokes,
+    }
+  },
+}
+</script>
+
 
 <style  lang="postcss" scoped>
 .hero {
@@ -38,12 +55,15 @@
 }
 
 .info {
-  @apply bg-primary-700 text-white p-20;
+  @apply flex bg-primary-700 text-white place-content-center place-items-center;
 }
 
-.info .text {
-  float: right;
-  max-width: 540px;
+.info div {
+  @apply p-20;
+}
+
+.info .jokes {
+  @apply bg-secondary-400;
 }
 
 @media all and (max-width: 900px) {
