@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import json from '@/content/site/jokes.json'
+import json from '@/content/jokes/jokes.json'
 
 export default {
   data() {

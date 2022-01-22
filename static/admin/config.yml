@@ -87,6 +87,6 @@ collections:
     create: true
     format: 'frontmatter'
     slug: '{{slug}}'
-    preview_path: 'projects/{{slug}}'
+    preview_path: 'jokes/{{slug}}'
     fields:
       - { label: 'Joke', name: 'joke', widget: 'markdown', required: true }
