@@ -86,5 +86,7 @@ collections:
     folder: 'content/jokes'
     create: true
     format: 'frontmatter'
+    # editor:
+    preview: true
     fields:
       - { label: 'Joke', name: 'joke', widget: 'text', required: true }
