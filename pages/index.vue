@@ -29,7 +29,7 @@ export default {
     try {
       joke = await $content('jokes', params.joke).fetch()
     } catch (e) {
-      error({ message: 'Joke not found' })
+      error({ message: 'Jokes not found' })
     }
     return { joke }
   },

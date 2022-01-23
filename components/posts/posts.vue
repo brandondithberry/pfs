@@ -55,7 +55,7 @@
       postType: {
         type: String,
         default: 'blog',
-        validator: (val) => ['blog', 'projects'].includes(val),
+        validator: (val) => ['blog', 'projects' ].includes(val),
       },
       amount: { // ? https://content.nuxtjs.org/fetching#limitn
         type: Number,
@@ -91,7 +91,7 @@
     methods: {
       formatDate(dateString) {
         const date = new Date(dateString)
-        return date.toLocaleDateString(process.env.lang) || ''
+        return date.toLocaleDateString(process.env.lang) || '' 
       },
       async fetchPosts(
           postType = this.postType,
