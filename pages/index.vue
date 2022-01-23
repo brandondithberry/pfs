@@ -15,7 +15,7 @@
         </h3>
       </div>
       <div class="jokes">
-        <posts post-type="jokes" :amount="1" />
+        <jokes />
         <p>Refresh the page for a new joke.</p>
       </div>
     </section>
@@ -25,13 +25,13 @@
 <script>
 export default {
   async asyncData({ $content, error }) {
-    let posts
+    let jokes
     try {
-      posts = await $content('jokes').fetch()
+      jokes = await $content('jokes').fetch()
     } catch (e) {
       error({ message: 'Jokes not found' })
     }
-    return { posts }
+    return { jokes }
   },
 }
 </script>

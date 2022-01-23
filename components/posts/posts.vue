@@ -74,8 +74,9 @@ export default {
   data() {
     return {
       posts: [],
+      jokes: [],
       loading: true,
-      selectedPost: '',
+      selectedJoke: '',
     }
   },
   computed: {
@@ -85,8 +86,8 @@ export default {
     },
   },
   created() {
-    const pst = Math.floor(Math.random() * this.posts.length)
-    this.selectedPost = this.posts[pst]
+    const jk = Math.floor(Math.random() * this.jokes.length)
+    this.selectedJoke = this.jokes[jk]
   },
   async mounted() {
     this.loading = true
