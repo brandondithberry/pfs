@@ -86,7 +86,5 @@ collections:
     folder: 'content/jokes'
     create: true
     format: 'frontmatter'
-    slug: '{{slug}}'
-    preview_path: 'jokes/{{slug}}'
     fields:
       - { label: 'Joke', name: 'joke', widget: 'string', required: true }

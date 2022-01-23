@@ -53,7 +53,7 @@ export default {
     postType: {
       type: String,
       default: 'blog',
-      validator: (val) => ['blog', 'projects', 'jokes'].includes(val),
+      validator: (val) => ['blog', 'projects'].includes(val),
     },
     amount: {
       // ? https://content.nuxtjs.org/fetching#limitn
@@ -74,9 +74,7 @@ export default {
   data() {
     return {
       posts: [],
-      jokes: [],
       loading: true,
-      selectedJoke: '',
     }
   },
   computed: {
@@ -84,10 +82,6 @@ export default {
       const classes = ['w-full', 'w-2/3', 'w-5/6']
       return [...Array.from({ length: this.amount }, (v, i) => classes[i % classes.length])] // repeats classes after one another
     },
-  },
-  created() {
-    const jk = Math.floor(Math.random() * this.jokes.length)
-    this.selectedJoke = this.jokes[jk]
   },
   async mounted() {
     this.loading = true
