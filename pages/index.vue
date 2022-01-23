@@ -15,7 +15,7 @@
         </h3>
       </div>
       <div class="jokes">
-        <h4>{{ joke }}</h4>
+        <posts post-type="jokes" :amount="1" />
         <p>Refresh the page for a new joke.</p>
       </div>
     </section>
@@ -24,14 +24,14 @@
 
 <script>
 export default {
-  async asyncData({ $content, params, error }) {
-    let joke
+  async asyncData({ $content, error }) {
+    let posts
     try {
-      joke = await $content('jokes', params.joke).fetch()
+      posts = await $content('jokes').fetch()
     } catch (e) {
       error({ message: 'Jokes not found' })
     }
-    return { joke }
+    return { posts }
   },
 }
 </script>
@@ -57,7 +57,7 @@ export default {
 }
 
 .info {
-  @apply flex bg-primary-700 text-white place-content-center place-items-stretch;
+  @apply flex bg-primary-700 text-white place-content-center place-items-center;
 }
 
 .info div {
