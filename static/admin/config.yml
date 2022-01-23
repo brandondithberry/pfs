@@ -89,4 +89,4 @@ collections:
     slug: '{{slug}}'
     preview_path: 'jokes/{{slug}}'
     fields:
-      - { label: 'Joke', name: 'joke', widget: 'text', required: true }
+      - { label: 'Joke', name: 'title', widget: 'text', required: true }
