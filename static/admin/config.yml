@@ -82,11 +82,11 @@ collections:
         }
   - name: 'jokes'
     label: 'Jokes'
-    files:
-      - label: 'Jokes'
-        name: 'jokes'
-        file: 'content/jokes/jokes.json'
-        format: 'json'
-        create: true
-        fields:
-          - { label: 'Joke', name: 'joke', widget: 'text', required: true }
+    label_singular: 'Joke'
+    folder: 'content/jokes'
+    create: true
+    format: 'frontmatter'
+    slug: '{{slug}}'
+    preview_path: 'jokes/{{slug}}'
+    fields:
+      - { label: 'Joke', name: 'joke', widget: 'text', required: true }
