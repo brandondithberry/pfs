@@ -5,7 +5,6 @@
         <h1>Professional Film & TV<br />Mixing + Gear Rentals</h1>
         <h4>Based in Spokane, Washington</h4>
       </div>
-      <div class="image"></div>
     </section>
     <section class="info">
       <div class="text">
@@ -41,23 +40,16 @@ export default {
 .hero {
   display: flex;
   width: 100%;
-}
-
-.hero .text {
-  width: 40%;
-  padding: 15% 40px 15% 0;
-  color: white;
-}
-
-.hero .image {
-  width: 60%;
-  padding: 15% 0 15% 0;
   background: 0% 30% / 120% no-repeat
     url('https://images.unsplash.com/photo-1632187981988-40f3cbaeef5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=2400&q=100');
 }
 
+.hero .text {
+  @apply text-white py-40 px-20;
+}
+
 .info {
-  @apply flex bg-primary-700 text-white place-content-center place-items-center;
+  @apply flex bg-white text-dark place-content-center place-items-center;
 }
 
 .info div {
@@ -65,7 +57,7 @@ export default {
 }
 
 .info .jokes {
-  @apply bg-secondary-400;
+  @apply bg-secondary-400 text-white;
 }
 
 @media all and (max-width: 900px) {

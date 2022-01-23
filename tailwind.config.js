@@ -41,7 +41,7 @@ module.exports = {
           DEFAULT: 'var(--color-accent)',
         },
         dark: {
-          DEFAULT: 'var(--color-secondary-900)',
+          DEFAULT: 'var(--color-primary-900)',
         }
       },
       screens: {
