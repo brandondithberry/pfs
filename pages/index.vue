@@ -66,6 +66,11 @@
   @apply grid p-0;
 }
 
+.info .logo-grid img {
+  width: 100%;
+  height: auto;
+}
+
 @media all and (max-width: 900px) {
   .hero {
     flex-basis: 100%;
