@@ -32,30 +32,38 @@
 
 <style  lang="postcss" scoped>
 .hero {
-  display: flex;
-  width: 100%;
+  @apply w-full;
   background: 0% 30% / 120% no-repeat
     url('https://images.unsplash.com/photo-1632187981988-40f3cbaeef5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=2400&q=100');
 }
 
 .hero .text {
-  @apply text-white py-40 px-20;
+  @apply w-full text-white py-40 px-14;
+  background: linear-gradient(45deg, #000000DD, #00000000);
 }
 
 .info {
-  @apply flex bg-white text-dark place-content-center place-items-stretch;
+  @apply flex text-dark w-full place-content-center place-items-stretch;
 }
 
 .info div {
-  @apply p-20;
+  @apply p-14;
+}
+
+.info .text {
+  @apply w-2/3 bg-white;
+}
+
+.info .text h3 {
+  @apply text-lg;
 }
 
 .info hr {
-  @apply my-7;
+  @apply my-7 border-accent border-t-2;
 }
 
 .info .jokes {
-  @apply bg-secondary text-white;
+  @apply w-1/3 bg-secondary text-white;
 }
 
 .info .logo-grid {
