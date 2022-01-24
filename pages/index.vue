@@ -12,6 +12,15 @@
           Contract sound mixer for film and TV, based in the Spokane metro area. I try to create a fun and welcoming
           work environment while providing broadcast-quality sound.
         </h3>
+        <hr />
+        <div class="logo-grid">
+          <div><img src="img/Paramount.jpg" alt="Paramount" /></div>
+          <div><img src="img/Langley.jpg" alt="Paramount" /></div>
+          <div><img src="img/Affirm.jpg" alt="Paramount" /></div>
+          <div><img src="img/Advent.jpg" alt="Paramount" /></div>
+          <div><img src="img/Bridgestone.jpg" alt="Paramount" /></div>
+          <div><img src="img/UNI.jpg" alt="Paramount" /></div>
+        </div>
       </div>
       <div class="jokes">
         <jokes />
@@ -20,21 +29,6 @@
     </section>
   </main>
 </template>
-
-<script>
-export default {
-  async asyncData({ $content, error }) {
-    let jokes
-    try {
-      jokes = await $content('jokes').fetch()
-    } catch (e) {
-      error({ message: 'Jokes not found' })
-    }
-    return { jokes }
-  },
-}
-</script>
-
 
 <style  lang="postcss" scoped>
 .hero {
@@ -49,15 +43,27 @@ export default {
 }
 
 .info {
-  @apply flex bg-white text-dark place-content-center place-items-center;
+  @apply flex bg-white text-dark place-content-center place-items-stretch;
 }
 
 .info div {
   @apply p-20;
 }
 
+.info hr {
+  @apply my-7;
+}
+
 .info .jokes {
-  @apply bg-secondary-400 text-white;
+  @apply bg-secondary text-white;
+}
+
+.info .logo-grid {
+  @apply grid grid-cols-3 p-0;
+}
+
+.info .logo-grid div {
+  @apply grid p-0;
 }
 
 @media all and (max-width: 900px) {
@@ -75,3 +81,17 @@ export default {
   }
 }
 </style>
+
+<script>
+export default {
+  async asyncData({ $content, error }) {
+    let jokes
+    try {
+      jokes = await $content('jokes').fetch()
+    } catch (e) {
+      error({ message: 'Jokes not found' })
+    }
+    return { jokes }
+  },
+}
+</script>
