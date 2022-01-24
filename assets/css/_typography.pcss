@@ -34,11 +34,12 @@
   }
 
   h2 {
-    @apply font-sans
-      font-semibold
+    @apply font-serif
       text-xl
       leading-tight
-      tracking-wide;
+      tracking-widest
+      uppercase;
+    font-weight: 500;
   }
 
   h3 {
@@ -74,7 +75,7 @@
 
   p {
     color: var(--text);
-    @apply font-sans leading-normal transition-colors duration-200 ease-in-out;
+    @apply font-sans tracking-wider leading-normal transition-colors duration-200 ease-in-out;
 
     & + h1,
     & + h2,

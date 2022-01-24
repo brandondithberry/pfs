@@ -16,8 +16,8 @@
         </nav>
       </div>
       <div class="btns">
-        <button class="btn lg:hidden">MENU</button>
-        <a href="tel:19403674447" class="btn cta">BOOK NOW</a>
+        <button class="btn alt lg:hidden">MENU</button>
+        <a href="tel:19403674447" class="btn">BOOK NOW</a>
       </div>
     </section>
     <section class="announcement"><span>Call or text for booking | 940-367-4447</span></section>
@@ -44,12 +44,11 @@ header {
 }
 
 .logo img {
-  width: 100%;
-  height: 3rem;
+  @apply w-full h-10 pr-5 md:h-12;
 }
 
 .menu {
-  @apply flex lg:flex md:hidden;
+  @apply flex hidden lg:flex;
 }
 
 .menu ul {
