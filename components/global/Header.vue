@@ -4,8 +4,19 @@
       <div class="logo">
         <nuxt-link to="/"><img src="img/logo.png" alt="Pro Film Sound Logo" /></nuxt-link>
       </div>
+      <div class="menu">
+        <nav>
+          <ul>
+            <li><nuxt-link to="work">Work</nuxt-link></li>
+            <li><nuxt-link to="mixing">Mixing</nuxt-link></li>
+            <li><nuxt-link to="rentals">Rentals</nuxt-link></li>
+            <li><nuxt-link to="about">About</nuxt-link></li>
+            <li><nuxt-link to="contact">Contact</nuxt-link></li>
+          </ul>
+        </nav>
+      </div>
       <div class="btns">
-        <button class="btn">MENU</button>
+        <button class="btn lg:hidden">MENU</button>
         <a href="tel:19403674447" class="btn cta">BOOK NOW</a>
       </div>
     </section>
@@ -35,6 +46,14 @@ header {
 .logo img {
   width: 100%;
   height: 3rem;
+}
+
+.menu {
+  @apply flex lg:flex md:hidden;
+}
+
+.menu ul {
+  @apply flex gap-14 text-white text-lg font-semibold uppercase tracking-widest;
 }
 
 .announcement {
