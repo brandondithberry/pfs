@@ -40,6 +40,12 @@
         <nuxt-link class="btn" to="rentals">View Gear</nuxt-link>
       </div>
     </section>
+    <section class="work">
+      <div class="text"> 
+        <h3></h3>
+        <h4></h4>
+      </div>
+    </section>
   </main>
 </template>
 
