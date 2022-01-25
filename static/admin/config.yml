@@ -57,6 +57,7 @@ collections:
           options:
             [
               { label: 'Mixing', value: 'mixing' },
+              { label: 'Boom', value: 'boom' },
               { label: 'Foley', value: 'foley' },
               { label: 'Post', value: 'post' },
             ],
