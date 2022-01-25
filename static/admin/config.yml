@@ -63,9 +63,9 @@ collections:
             ],
         }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
-      - { label: 'Description', name: 'description', widget: 'string', required: false }
-      - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
-      - { label: 'Content', name: 'body', widget: 'markdown', required: false }
+      - { label: 'Description', name: 'description', widget: 'string', required: true }
+      - { label: 'Cover Image', name: 'cover', widget: 'image', required: true, allow_multiple: false }
+      - { label: 'Content', name: 'body', widget: 'markdown', required: true }
   - name: 'jokes'
     label: 'Jokes'
     label_singular: 'Joke'
