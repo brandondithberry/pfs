@@ -40,10 +40,14 @@
         <nuxt-link class="btn" to="rentals">View Gear</nuxt-link>
       </div>
     </section>
-    <section class="work">
-      <div class="text"> 
-        <h3></h3>
-        <h4></h4>
+    <section class="featured">
+      <div class="slider">
+        <div class="slide" v-for="wrk in work" :key="wrk" :style="{ 'background-image': 'url(' + wrk.cover + ')' }">
+          <div class="content">
+            <h2>{{ wrk.title }}</h2>
+            <p>{{ wrk.description }}</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -106,12 +110,20 @@
 }
 
 .services p {
-  @apply text-lg m-4 mx-auto;
+  @apply text-lg my-5 mx-auto;
   max-width: 350px;
 }
 
 .services .rentals {
   @apply bg-primary-700;
+}
+
+.slide {
+  @apply flex w-full bg-cover bg-center text-center;
+}
+
+.slide .content {
+  @apply w-full py-40 px-14 backdrop-brightness-50;
 }
 
 @media all and (max-width: 900px) {
@@ -140,6 +152,15 @@ export default {
       error({ message: 'Jokes not found' })
     }
     return { jokes }
+  },
+  async asyncData({ $content, error }) {
+    let work
+    try {
+      work = await $content('work').fetch()
+    } catch (e) {
+      error({ message: 'Work not found' })
+    }
+    return { work }
   },
 }
 </script>
