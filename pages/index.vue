@@ -114,7 +114,8 @@
   }
   .slide {
     .content {
-      @apply py-40 px-14 backdrop-brightness-50;
+      @apply py-40 px-14;
+      background: rgba(0,0,0,0.5);
     }
   }
   .slide > div {
