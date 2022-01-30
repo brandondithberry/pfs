@@ -50,6 +50,7 @@
           <div class="content">
             <h2>{{ wrk.title }}</h2>
             <p>{{ wrk.description }}</p>
+            <nuxt-link class="btn" :to="'/work/' + wrk.slug">Learn More</nuxt-link>
           </div>
         </div>
       </div>
@@ -115,8 +116,11 @@
   .slide {
     .content {
       @apply py-40 px-14;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
     }
+  }
+  .btn {
+    @apply mt-5;
   }
   .slide > div {
     @apply snap-start;
