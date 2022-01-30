@@ -112,17 +112,6 @@
   div {
     @apply w-full h-full shrink-0 bg-cover bg-center text-center scroll-smooth;
   }
-  .arrows {
-    .arrow {
-      @apply bg-primary-700 w-16 h-16 items-center justify-center text-white cursor-pointer z-50;
-      .previous {
-        @apply left-0;
-      }
-      .next {
-        @apply right-0;
-      }
-    }
-  }
   .slide {
     .content {
       @apply py-40 px-14 backdrop-brightness-50;
@@ -131,17 +120,6 @@
   .slide > div {
     @apply snap-start;
   }
-}
-::-webkit-scrollbar {
-  @apply bg-secondary-700;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-secondary;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-secondary-400;
 }
 
 @media all and (max-width: 900px) {

@@ -38,7 +38,9 @@ module.exports = {
           '900': 'var(--color-secondary-900)'
         },
         accent: {
+          'light': 'var(--color-accent-light)',
           DEFAULT: 'var(--color-accent)',
+          'dark': 'var(--color-accent-dark)',
         },
         dark: {
           DEFAULT: 'var(--color-primary-900)',

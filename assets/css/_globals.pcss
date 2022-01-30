@@ -11,3 +11,15 @@ body {
   color: var(--text);
   @apply transition-colors duration-200 ease-in-out text-white;
 }
+
+::-webkit-scrollbar {
+  @apply bg-primary-800 border-solid border-0 border-2 border-accent w-3 h-3;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent-light;
+}
