@@ -1,5 +1,9 @@
 <template>
-  <h5>{{ selectedWork.title }}</h5>
+  <div class="posts">
+    <div class="post" v-for="post in posts" :key="post.slug">
+      <h2>{{ post.title }}</h2>
+    </div>
+  </div>
 </template>
 
 <style>
@@ -21,13 +25,7 @@ export default {
   data() {
     return {
       posts: [],
-      selectedWork: '',
     }
-  },
-  async created() {
-    this.posts = await this.fetchPosts()
-    const ln = Math.floor(Math.random() * this.posts.length)
-    this.selectedWork = this.posts[ln]
   },
   methods: {
     async fetchPosts(postType = this.postType) {

@@ -27,9 +27,15 @@ export default {
     try {
       post = await $content('work', params.work).fetch()
     } catch (e) {
-      error({ message: 'Work not found' })
+      error({ message: 'Work post not found' })
     }
     return { post }
+  },
+  methods: {
+    formatDate(dateString) {
+      const date = new Date(dateString)
+      return date.toLocaleDateString(process.env.lang) || ''
+    },
   },
 }
 </script>

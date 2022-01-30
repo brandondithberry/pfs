@@ -50,7 +50,7 @@
           <div class="content">
             <h2>{{ wrk.title }}</h2>
             <p>{{ wrk.description }}</p>
-            <nuxt-link class="btn" :to="'/work/' + wrk.slug">Learn More</nuxt-link>
+            <router-link class="btn" :to="'/work/' + wrk.slug">Learn More</router-link>
           </div>
         </div>
       </div>

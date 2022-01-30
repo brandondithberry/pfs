@@ -7,11 +7,11 @@
       <div class="menu">
         <nav>
           <ul>
-            <li><nuxt-link to="work">Work</nuxt-link></li>
-            <li><nuxt-link to="mixing">Mixing</nuxt-link></li>
-            <li><nuxt-link to="rentals">Rentals</nuxt-link></li>
-            <li><nuxt-link to="about">About</nuxt-link></li>
-            <li><nuxt-link to="contact">Contact</nuxt-link></li>
+            <li><a href="/work">Work</a></li>
+            <li><a href="/mixing">Mixing</a></li>
+            <li><a href="/rentals">Rentals</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </nav>
       </div>
