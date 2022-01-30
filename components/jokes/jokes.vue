@@ -1,10 +1,10 @@
 <template>
-  <h5>{{ selectedJoke.joke }}</h5>
+  <h5>{{ selectedJoke.joke }} <a href="javascript:location.reload();">(Get a New Joke)</a></h5>
 </template>
 
-<style>
-.post {
-  margin-bottom: 1rem;
+<style lang="postcss" scoped>
+a {
+  @apply underline;
 }
 </style>
 

@@ -6,6 +6,9 @@
         <h4>Based in Spokane, Washington</h4>
       </div>
     </section>
+    <section class="jokes" id="joke">
+      <jokes />
+    </section>
     <section class="info">
       <div class="text">
         <h3>
@@ -22,11 +25,6 @@
           <div><img src="img/UNI.jpg" alt="Paramount" /></div>
         </div>
       </div>
-      <div class="jokes" id="joke">
-        <h4>A Joke A Day...</h4>
-        <jokes />
-        <p><a href="javascript:location.reload();">Refresh</a> the page for a new joke.</p>
-      </div>
     </section>
     <section class="services">
       <div class="mixing">
@@ -42,7 +40,13 @@
     </section>
     <section class="featured">
       <div class="slider">
-        <div class="slide" v-for="wrk in work" :key="wrk" :style="{ 'background-image': 'url(' + wrk.cover + ')' }">
+        <div
+          class="slide"
+          v-for="wrk in work"
+          :key="wrk.slug"
+          :amount="3"
+          :style="{ 'background-image': 'url(' + wrk.cover + ')' }"
+        >
           <div class="content">
             <h2>{{ wrk.title }}</h2>
             <p>{{ wrk.description }}</p>
@@ -53,91 +57,103 @@
   </main>
 </template>
 
-<style  lang="postcss" scoped>
+<style lang="postcss" scoped>
 .hero {
-  background: 0% 30% / 120% no-repeat
+  background: right center / cover no-repeat
     url('https://images.unsplash.com/photo-1632187981988-40f3cbaeef5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=2400&q=100');
+  .text {
+    @apply text-white text-center py-40;
+    background: linear-gradient(45deg, #000000dd, #00000000);
+  }
 }
 
-.hero .text {
-  @apply text-white py-40 px-14;
-  background: linear-gradient(45deg, #000000dd, #00000000);
+.jokes {
+  @apply bg-secondary text-white text-center p-6;
 }
 
 .info {
-  @apply flex text-dark place-content-center place-items-stretch;
-}
-
-.info div {
-  @apply p-14;
-}
-
-.info .text {
-  @apply w-2/3 bg-white;
-}
-
-.info hr {
-  @apply my-7 border-accent border-t-2;
-}
-
-.info .jokes {
-  @apply w-1/3 bg-secondary text-white;
-}
-
-.info .jokes a {
-  @apply underline;
-}
-
-.info .logo-grid {
-  @apply grid grid-cols-3 p-0;
-}
-
-.info .logo-grid div {
-  @apply grid p-0;
-}
-
-.info .logo-grid img {
-  width: 100%;
-  height: auto;
+  @apply flex bg-white text-dark place-content-center place-items-stretch text-center py-12 px-6 md:py-20;
+  .text {
+    @apply max-w-xl bg-white;
+  }
+  hr {
+    @apply my-7 border-accent border-t-2;
+  }
+  .logo-grid {
+    @apply grid grid-cols-2 p-0 md:grid-cols-3;
+    div {
+      @apply grid p-0;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .services {
-  @apply grid grid-cols-2 text-center place-content-stretch place-items-stretch;
+  @apply grid text-center place-content-stretch place-items-stretch md:grid-cols-2;
+  div {
+    @apply grid bg-primary-600 place-content-center place-items-center py-14 px-6 md:py-20;
+  }
+  p {
+    @apply text-lg my-5 mx-auto;
+    max-width: 350px;
+  }
+  .rentals {
+    @apply bg-primary-700;
+  }
 }
 
-.services div {
-  @apply grid p-20 bg-primary-600 place-content-center place-items-center;
+.slider {
+  @apply flex w-full overflow-x-auto snap-x snap-mandatory place-items-stretch;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  div {
+    @apply w-full h-full shrink-0 bg-cover bg-center text-center scroll-smooth;
+  }
+  .arrows {
+    .arrow {
+      @apply bg-primary-700 w-16 h-16 items-center justify-center text-white cursor-pointer z-50;
+      .previous {
+        @apply left-0;
+      }
+      .next {
+        @apply right-0;
+      }
+    }
+  }
+  .slide {
+    .content {
+      @apply py-40 px-14 backdrop-brightness-50;
+    }
+  }
+  .slide > div {
+    @apply snap-start;
+  }
+}
+::-webkit-scrollbar {
+  @apply bg-secondary-700;
 }
 
-.services p {
-  @apply text-lg my-5 mx-auto;
-  max-width: 350px;
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary;
 }
 
-.services .rentals {
-  @apply bg-primary-700;
-}
-
-.slide {
-  @apply flex w-full bg-cover bg-center text-center;
-}
-
-.slide .content {
-  @apply w-full py-40 px-14 backdrop-brightness-50;
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-secondary-400;
 }
 
 @media all and (max-width: 900px) {
   .hero {
     flex-basis: 100%;
     flex-direction: column;
-  }
-
-  .hero .text {
-    width: 100%;
-  }
-
-  .hero .image {
-    width: 100%;
+    .text {
+      width: 100%;
+    }
+    .image {
+      width: 100%;
+    }
   }
 }
 </style>
@@ -161,6 +177,17 @@ export default {
       error({ message: 'Work not found' })
     }
     return { work }
+  },
+  computed: {
+    setTimeout: function () {
+      let activeSlide = document.querySelector('.slide.translate-x-0')
+      activeSlide.classList.remove('translate-x-0')
+      activeSlide.classList.add('-translate-x-full')
+
+      let nextSlide = activeSlide.nextElementSibling
+      nextSlide.classList.remove('translate-x-full')
+      nextSlide.classList.add('translate-x-0')
+    },
   },
 }
 </script>

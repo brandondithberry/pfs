@@ -56,6 +56,6 @@ header {
 }
 
 .announcement {
-  @apply bg-secondary-700 text-white p-5 text-center uppercase tracking-widest font-bold;
+  @apply bg-secondary-700 text-white p-4 text-center uppercase tracking-widest font-bold;
 }
 </style>

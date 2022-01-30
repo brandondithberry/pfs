@@ -31,11 +31,5 @@ export default {
     }
     return { post }
   },
-  methods: {
-    formatDate(dateString) {
-      const date = new Date(dateString)
-      return date.toLocaleDateString(process.env.lang) || ''
-    },
-  },
 }
 </script>
