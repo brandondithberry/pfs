@@ -7,4 +7,4 @@ description: Worked with the sound designer to record and edit the foley tracks
 subtitle: Foley Recording and Editing
 cover: /img/the-mist.png
 ---
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/PnOtzlsjlkE" title="Dinner with Godfather YouTube" frameborder="0" allow="encrypted-media; " allowfullscreen></iframe>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/PnOtzlsjlkE" title="YouTube Video" frameborder="0" allow="encrypted-media; " allowfullscreen></iframe>
