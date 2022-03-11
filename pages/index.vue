@@ -44,7 +44,7 @@
           <div class="container" :style="{ backgroundImage: `url(${wrk.cover})` }">
             <div class="overlay">
               <h2>{{ wrk.title }}</h2>
-              <p class="text-xl">{{ wrk.description }}</p>
+              <h4 class="text-xl">{{ wrk.subtitle }}</h4>
               <a :href="`work/${wrk.slug}`" class="btn">View Work</a>
             </div>
           </div>
