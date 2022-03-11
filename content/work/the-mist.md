@@ -5,4 +5,4 @@ title: The Mist
 subtitle: Foley Recording and Editing
 cover: /img/the-mist.png
 ---
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/PnOtzlsjlkE" title="YouTube Video" frameborder="0" allow="encrypted-media; " allowfullscreen></iframe>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/PnOtzlsjlkE" title="YouTube Video" frameborder="0" allow="encrypted-media; " allowfullscreen></iframe>
