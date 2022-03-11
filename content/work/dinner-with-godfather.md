@@ -3,7 +3,6 @@ category:
   - mixing
   - boom
   - post
-  - foley
 title: Dinner with Godfather
 description: Full sound production provided for an indie film project.
 subtitle: On Set Sound Mixing with Boom Operation
