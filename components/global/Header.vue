@@ -24,23 +24,12 @@
   </header>
 </template>
 
-<script>
-export default {
-  name: 'Header',
-}
-</script>
-
 <style lang="postcss" scoped>
 header {
   width: 100%;
 }
 .head {
-  display: flex;
-  place-content: space-between;
-  place-items: center;
-  width: 100%;
-  padding-bottom: 20px;
-  border-bottom: 2px solid #c2d076;
+  @apply flex w-full place-content-between place-items-center p-6;
 }
 
 .logo img {
@@ -49,13 +38,23 @@ header {
 
 .menu {
   @apply flex hidden lg:flex;
-}
 
-.menu ul {
-  @apply flex gap-14 text-white text-lg font-semibold uppercase tracking-widest;
+  ul {
+    @apply flex gap-14 text-white text-lg font-semibold uppercase tracking-widest;
+
+    a:hover {
+      @apply text-accent;
+    }
+  }
 }
 
 .announcement {
-  @apply bg-secondary-700 text-white p-4 text-center uppercase tracking-widest font-bold;
+  @apply bg-secondary-800 text-white p-4 text-center uppercase tracking-widest font-bold;
 }
 </style>
+
+<script>
+export default {
+  name: 'Header',
+}
+</script>

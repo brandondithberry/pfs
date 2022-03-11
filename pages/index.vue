@@ -11,10 +11,10 @@
     </section>
     <section class="info">
       <div class="text">
-        <h3>
+        <p>
           Contract sound mixer for film and TV, based in the Spokane metro area. I try to create a fun and welcoming
           work environment while providing broadcast-quality sound.
-        </h3>
+        </p>
         <hr />
         <div class="logo-grid">
           <div><img src="img/Paramount.jpg" alt="Paramount" /></div>
@@ -39,26 +39,45 @@
       </div>
     </section>
     <section class="featured">
-      <div class="slider">
-        <div
-          class="slide"
-          v-for="wrk in work"
-          :key="wrk.slug"
-          :amount="3"
-          :style="{ 'background-image': 'url(' + wrk.cover + ')' }"
-        >
-          <div class="content">
-            <h2>{{ wrk.title }}</h2>
-            <p>{{ wrk.description }}</p>
-            <router-link class="btn" :to="'/work/' + wrk.slug">Learn More</router-link>
+      <Carousel class="carousel">
+        <Slide class="slide" v-for="(wrk, index) in work" :key="index">
+          <div class="container" :style="{ backgroundImage: `url(${wrk.cover})` }">
+            <div class="overlay">
+              <h2>{{ wrk.title }}</h2>
+              <p class="text-xl">{{ wrk.description }}</p>
+              <a :href="`work/${wrk.slug}`" class="btn">View Work</a>
+            </div>
           </div>
-        </div>
-      </div>
+        </Slide>
+      </Carousel>
     </section>
   </main>
 </template>
 
 <style lang="postcss" scoped>
+.carousel {
+  @apply w-full h-full text-center;
+
+  .container {
+    @apply flex w-full h-full place-content-center place-items-center flex-col;
+    background-size: cover;
+    background: no-repeat center center;
+
+    .overlay {
+      @apply flex w-full h-full py-40 px-20 place-content-center place-items-center flex-col;
+      background: rgba(0, 0, 0, 0.5);
+
+      p {
+        @apply max-w-[600px];
+      }
+
+      .btn {
+        @apply mt-6;
+      }
+    }
+  }
+}
+
 .hero {
   background: right center / cover no-repeat
     url('https://images.unsplash.com/photo-1632187981988-40f3cbaeef5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=2400&q=100');
@@ -74,8 +93,9 @@
 
 .info {
   @apply flex bg-white text-dark place-content-center place-items-stretch text-center py-12 px-6 md:py-20;
+
   .text {
-    @apply max-w-xl bg-white;
+    @apply max-w-xl bg-white text-xl;
   }
   hr {
     @apply my-7 border-accent border-t-2;
@@ -106,27 +126,6 @@
   }
 }
 
-.slider {
-  @apply flex w-full overflow-x-auto snap-x snap-mandatory place-items-stretch;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  div {
-    @apply w-full h-full shrink-0 bg-cover bg-center text-center scroll-smooth;
-  }
-  .slide {
-    .content {
-      @apply py-40 px-14;
-      background: rgba(0, 0, 0, 0.5);
-    }
-  }
-  .btn {
-    @apply mt-5;
-  }
-  .slide > div {
-    @apply snap-start;
-  }
-}
-
 @media all and (max-width: 900px) {
   .hero {
     flex-basis: 100%;
@@ -142,6 +141,9 @@
 </style>
 
 <script>
+import Carousel from '~/components/carousel/Carousel.vue'
+import Slide from '~/components/carousel/Slide.vue'
+
 export default {
   async asyncData({ $content, error }) {
     let jokes
@@ -161,16 +163,9 @@ export default {
     }
     return { work }
   },
-  computed: {
-    setTimeout: function () {
-      let activeSlide = document.querySelector('.slide.translate-x-0')
-      activeSlide.classList.remove('translate-x-0')
-      activeSlide.classList.add('-translate-x-full')
-
-      let nextSlide = activeSlide.nextElementSibling
-      nextSlide.classList.remove('translate-x-full')
-      nextSlide.classList.add('translate-x-0')
-    },
+  components: {
+    Carousel,
+    Slide,
   },
 }
 </script>

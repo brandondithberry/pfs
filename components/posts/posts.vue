@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'Work',
+name: 'Work',
   props: {
     postType: {
       type: String,

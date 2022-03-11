@@ -1,6 +1,5 @@
 @layer components {
   .btn {
-    box-shadow: 0px 0px 5px #c2d076;
     transition: 0.4s ease;
     @apply inline-block
     w-fit
@@ -14,8 +13,10 @@
   .btn.alt {
     @apply bg-transparent text-accent;
   }
+  .btn.sm {
+    @apply py-2 px-3;
+  }
   .btn:hover {
-    box-shadow: 0px 0px 10px #c2d076;
     @apply bg-white text-dark border-white;
   }
 }

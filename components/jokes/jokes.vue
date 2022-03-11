@@ -1,5 +1,5 @@
 <template>
-  <h5>{{ selectedJoke.joke }} <a href="javascript:location.reload();">(Get a New Joke)</a></h5>
+  <p>{{ selectedJoke.joke }} <a href="javascript:location.reload();">(Get a New Joke)</a></p>
 </template>
 
 <style lang="postcss" scoped>
