@@ -22,7 +22,9 @@
       </form>
     </div>
     <div class="right">
-      <h2>Let's record something great.</h2>
+      <div class="overlay">
+        <h2>Let's record something great.</h2>
+      </div>
     </div>
   </section>
 </template>
@@ -32,12 +34,12 @@ section {
   @apply flex w-full place-content-center justify-between flex-row bg-primary-800;
 
   .left {
-    @apply w-1/2 p-20;
+    @apply w-2/3 p-20;
   }
 
   .right {
-    @apply w-1/2 p-20;
-    background: url('~/static/img/272701578_758037662254380_7792244682493182394_n.jpg') no-repeat center center;
+    @apply w-1/3;
+    background: url('~/static/img/272701578_758037662254380_7792244682493182394_n.jpg') no-repeat center right;
     background-size: cover;
   }
 
