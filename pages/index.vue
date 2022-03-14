@@ -39,12 +39,19 @@
       </div>
     </section>
     <section class="featured">
-      <Carousel class="carousel">
+      <Carousel
+        :navigation="true"
+        :pagination="true"
+        :autoplay="true"
+        :timeout="5000"
+        class="carousel"
+        v-slot="{ currentSlide }"
+      >
         <Slide class="slide" v-for="(wrk, index) in work" :key="index">
-          <div class="container" :style="{ backgroundImage: `url(${wrk.cover})` }">
+          <div v-show="currentSlide === index + 1" class="container" :style="{ backgroundImage: `url(${wrk.cover})` }">
             <div class="overlay">
-              <h2>{{ wrk.title }}</h2>
-              <h4 class="text-xl">{{ wrk.subtitle }}</h4>
+              <h2 class="text-4xl">{{ wrk.title }}</h2>
+              <p class="text-xl">{{ wrk.subtitle }}</p>
               <a :href="`work/${wrk.slug}`" class="btn">View Work</a>
             </div>
           </div>
@@ -56,7 +63,11 @@
 
 <style lang="postcss" scoped>
 .carousel {
-  @apply w-full h-full text-center;
+  @apply relative w-full h-[500px] text-center;
+
+  .slide {
+    @apply absolute w-full h-full top-0 left-0;
+  }
 
   .container {
     @apply flex w-full h-full place-content-center place-items-center flex-col;
