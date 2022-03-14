@@ -37,7 +37,8 @@ section {
 
   .right {
     @apply w-1/2 p-20;
-    background: url();
+    background: url('~/static/img/272701578_758037662254380_7792244682493182394_n.jpg') no-repeat center center;
+    background-size: cover;
   }
 
   h1 {
