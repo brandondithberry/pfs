@@ -1,7 +1,9 @@
 <template>
-  <transition name="fade">
-    <slot />
-  </transition>
+  <div class="slide">
+    <transition name="fade">
+      <slot />
+    </transition>
+  </div>
 </template>
 
 <style>

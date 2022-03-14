@@ -25,7 +25,7 @@ export default {
   data(props) {
     return {
       currentSlide: 1,
-      getSlideCount: null,
+      getSlideCount: 0,
       navigationEnabled: props.navigation === undefined ? true : props.navigation,
       paginationEnabled: props.pagination === undefined ? true : props.pagination,
       autoPlayEnabled: props.autoplay === undefined ? true : props.autoplay,

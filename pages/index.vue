@@ -47,8 +47,8 @@
         class="carousel"
         v-slot="{ currentSlide }"
       >
-        <Slide class="slide" v-for="(wrk, index) in work" :key="index">
-          <div v-show="currentSlide === index + 1" class="container" :style="{ backgroundImage: `url(${wrk.cover})` }">
+        <Slide class="page" v-for="(wrk, index) in work" :key="index">
+          <div class="container" v-show="currentSlide === index + 1" :style="{ backgroundImage: `url(${wrk.cover})` }">
             <div class="overlay">
               <h2 class="text-4xl">{{ wrk.title }}</h2>
               <p class="text-xl">{{ wrk.subtitle }}</p>
@@ -65,7 +65,7 @@
 .carousel {
   @apply relative w-full h-[500px] text-center;
 
-  .slide {
+  .page {
     @apply absolute w-full h-full top-0 left-0;
   }
 
