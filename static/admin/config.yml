@@ -64,17 +64,6 @@ collections:
       - { label: 'Sub-Title', name: 'subtitle', widget: 'string', required: true }
       - { label: 'Cover Image', name: 'cover', widget: 'image', required: true, allow_multiple: false }
       - { label: 'Content', name: 'body', widget: 'markdown', required: true }
-  - name: 'about'
-    label: 'About'
-    files:
-      - label: 'Content'
-        name: 'content'
-        file: 'site/content/about.yml'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string', required: true }
-          - { label: 'Intro', name: 'intro', widget: 'string', required: true }
-          - { label: 'Cover Image', name: 'cover', widget: 'image', required: true, allow_multiple: false }
-          - { label: 'Content', name: 'body', widget: 'markdown', required: true }
   - name: 'mixing'
     label: 'Mixing'
     label_singular: 'mixing'
@@ -101,6 +90,17 @@ collections:
       - { label: 'Price', name: 'price', widget: 'number', required: true }
       - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
       - { label: 'Content', name: 'content', widget: 'markdown', required: true }
+  - name: 'about'
+    label: 'About'
+    files:
+      - label: 'Content'
+        name: 'content'
+        file: 'site/content/about.yml'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - { label: 'Intro', name: 'intro', widget: 'string', required: true }
+          - { label: 'Cover Image', name: 'cover', widget: 'image', required: true, allow_multiple: false }
+          - { label: 'Content', name: 'body', widget: 'markdown', required: true }
   - name: 'jokes'
     label: 'Jokes'
     label_singular: 'Joke'
