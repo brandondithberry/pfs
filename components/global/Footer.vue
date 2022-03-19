@@ -28,8 +28,8 @@
       <nav>
         <ul>
           <li><a href="/">Facebook</a></li>
-          <li><a href="/">Instagram</a></li>
-          <li><a href="/">YouTube</a></li>
+          <li><a href="https://instagram.com/adamcterrell">Instagram</a></li>
+          <li><a href="https://www.youtube.com/user/atomterrible">YouTube</a></li>
         </ul>
       </nav>
     </div>

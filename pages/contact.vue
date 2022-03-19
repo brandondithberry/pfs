@@ -21,11 +21,7 @@
         <input class="btn" type="submit" value="Send" />
       </form>
     </div>
-    <div class="right">
-      <div class="overlay">
-        <h2>Let's record something great.</h2>
-      </div>
-    </div>
+    <div class="right"></div>
   </section>
 </template>
 
@@ -39,7 +35,7 @@ section {
 
   .right {
     @apply w-1/3;
-    background: url('~/static/img/272701578_758037662254380_7792244682493182394_n.jpg') no-repeat center right;
+    background: url('~/static/img/272635619_1066555204138398_2314852005810391912_n.jpg') no-repeat center center;
     background-size: cover;
   }
 

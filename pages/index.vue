@@ -12,8 +12,8 @@
     <section class="info">
       <div class="text">
         <p>
-          Contract sound mixer for film and TV, based in the Spokane metro area. I try to create a fun and welcoming
-          work environment while providing broadcast-quality sound.
+          Contract sound mixer for film and TV, based in the Spokane metro area. I provide broadcast-quality sound while
+          creating a fun and welcoming work environment.
         </p>
         <hr />
         <div class="logo-grid">
