@@ -37,7 +37,7 @@ collections:
               pattern: ['^[a-z]{2}([-])?([A-Za-z]{2})?$', 'Must match "xx" or "xx-XX" syntax (ex. "en" or "sv-SE")'],
             }
           # - { label: Site Email, name: siteemail, widget: string, required: false }
-    - name: 'work'
+  - name: 'work'
     label: 'Work'
     label_singular: 'work'
     folder: 'content/work'
