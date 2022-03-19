@@ -1,6 +1,6 @@
 <template>
   <div class="carousel">
-    <slot :currentSlide="currentSlide" />
+    <slot :currentSlide="currentSlide" class="slide" />
 
     <div v-if="navigationEnabled === true" class="navigate">
       <a class="toggle-page left" @click="prevSlide"> ❮</a>
@@ -63,6 +63,10 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.slide {
+  @apply absolute w-full h-full top-0 left-0;
+}
+
 .navigate {
   @apply absolute flex w-full h-full justify-between items-center;
 

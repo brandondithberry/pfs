@@ -1,8 +1,10 @@
 <template>
-  <main>
-    <section id="banner"></section>
-  </main>
+  <section></section>
 </template>
 
 <style lang="postcss" scoped>
 </style>
+
+<script>
+export default {}
+</script>

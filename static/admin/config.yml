@@ -37,6 +37,43 @@ collections:
               pattern: ['^[a-z]{2}([-])?([A-Za-z]{2})?$', 'Must match "xx" or "xx-XX" syntax (ex. "en" or "sv-SE")'],
             }
           # - { label: Site Email, name: siteemail, widget: string, required: false }
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - label: 'About'
+        name: 'about'
+        file: 'site/content/about.yml'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - { label: 'Intro', name: 'intro', widget: 'string', required: true }
+          - { label: 'Cover Image', name: 'cover', widget: 'image', required: true, allow_multiple: false }
+          - { label: 'Content', name: 'body', widget: 'markdown', required: true }
+  - name: 'mixing'
+    label: 'Mixing'
+    label_singular: 'mixing'
+    folder: 'content/mixing'
+    create: true
+    format: 'frontmatter'
+    slug: '{{slug}}'
+    preview_path: 'mixing/{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Price', name: 'price', widget: 'number', required: true }
+      - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
+      - { label: 'Content', name: 'content', widget: 'markdown', required: true }
+  - name: 'rentals'
+    label: 'Rentals'
+    label_singular: 'rental'
+    folder: 'content/rentals'
+    create: true
+    format: 'frontmatter'
+    slug: '{{slug}}'
+    preview_path: 'rentals/{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Price', name: 'price', widget: 'number', required: true }
+      - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
+      - { label: 'Content', name: 'content', widget: 'markdown', required: true }
   - name: 'work'
     label: 'Work'
     label_singular: 'work'

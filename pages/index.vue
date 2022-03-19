@@ -47,12 +47,14 @@
         class="carousel"
         v-slot="{ currentSlide }"
       >
-        <Slide class="page" v-for="(wrk, index) in work" :key="index">
-          <div class="container" v-show="currentSlide === index + 1" :style="{ backgroundImage: `url(${wrk.cover})` }">
+        <Slide class="slide" v-for="(wrk, index) in work" :key="index">
+          <div class="contain" v-show="currentSlide === index + 1" :style="{ backgroundImage: `url(${wrk.cover})` }">
             <div class="overlay">
-              <h2 class="text-4xl">{{ wrk.title }}</h2>
-              <p class="text-xl">{{ wrk.subtitle }}</p>
-              <a :href="`work/${wrk.slug}`" class="btn">View Work</a>
+              <div class="content">
+                <h2 class="text-4xl">{{ wrk.title }}</h2>
+                <p class="text-xl">{{ wrk.subtitle }}</p>
+                <a :href="`work/${wrk.slug}`" class="btn">View Work</a>
+              </div>
             </div>
           </div>
         </Slide>
@@ -65,11 +67,7 @@
 .carousel {
   @apply relative w-full h-[500px] text-center;
 
-  .page {
-    @apply absolute w-full h-full top-0 left-0;
-  }
-
-  .container {
+  .contain {
     @apply flex w-full h-full place-content-center place-items-center flex-col;
     background-size: cover;
     background: no-repeat center center;
@@ -78,12 +76,16 @@
       @apply flex w-full h-full py-40 px-20 place-content-center place-items-center flex-col;
       background: rgba(0, 0, 0, 0.5);
 
-      p {
-        @apply max-w-[600px];
-      }
+      .content {
+        @apply z-50;
 
-      .btn {
-        @apply mt-6;
+        p {
+          @apply max-w-[600px];
+        }
+
+        .btn {
+          @apply mt-6;
+        }
       }
     }
   }

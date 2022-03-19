@@ -2,7 +2,7 @@
   <header>
     <section class="head">
       <div class="logo">
-        <nuxt-link to="/"><img src="img/logo.png" alt="Pro Film Sound Logo" /></nuxt-link>
+        <nuxt-link to="/"><img src="~/static/img/logo.png" alt="Pro Film Sound Logo" /></nuxt-link>
       </div>
       <div class="menu">
         <nav>
@@ -14,13 +14,10 @@
             <li><a href="/contact">Contact</a></li>
           </ul>
         </nav>
-      </div>
-      <div class="btns">
         <button class="btn alt lg:hidden">MENU</button>
-        <a href="tel:19403674447" class="btn">BOOK NOW</a>
       </div>
     </section>
-    <section class="announcement"><span>Call or text for booking | 940-367-4447</span></section>
+    <section class="announcement"><span>For Booking Call/Text (940) 367-4447</span></section>
   </header>
 </template>
 
@@ -37,13 +34,17 @@ header {
 }
 
 .menu {
-  @apply flex hidden lg:flex;
+  @apply flex;
 
-  ul {
-    @apply flex gap-14 text-white text-lg font-semibold uppercase tracking-widest;
+  nav {
+    @apply hidden lg:flex;
 
-    a:hover {
-      @apply text-accent;
+    ul {
+      @apply flex gap-14 text-white text-lg font-semibold uppercase tracking-widest;
+
+      a:hover {
+        @apply text-accent;
+      }
     }
   }
 }
