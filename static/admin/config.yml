@@ -37,11 +37,38 @@ collections:
               pattern: ['^[a-z]{2}([-])?([A-Za-z]{2})?$', 'Must match "xx" or "xx-XX" syntax (ex. "en" or "sv-SE")'],
             }
           # - { label: Site Email, name: siteemail, widget: string, required: false }
-  - name: 'pages'
-    label: 'Pages'
+    - name: 'work'
+    label: 'Work'
+    label_singular: 'work'
+    folder: 'content/work'
+    create: true
+    format: 'frontmatter'
+    slug: '{{slug}}'
+    preview_path: 'work/{{slug}}'
+    fields:
+      - {
+          label: 'Work Category',
+          name: 'category',
+          widget: 'select',
+          multiple: true,
+          default: 'mixing',
+          options:
+            [
+              { label: 'Mixing', value: 'mixing' },
+              { label: 'Boom', value: 'boom' },
+              { label: 'Foley', value: 'foley' },
+              { label: 'Post', value: 'post' },
+            ],
+        }
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Sub-Title', name: 'subtitle', widget: 'string', required: true }
+      - { label: 'Cover Image', name: 'cover', widget: 'image', required: true, allow_multiple: false }
+      - { label: 'Content', name: 'body', widget: 'markdown', required: true }
+  - name: 'about'
+    label: 'About'
     files:
-      - label: 'About'
-        name: 'about'
+      - label: 'Content'
+        name: 'content'
         file: 'site/content/about.yml'
         fields:
           - { label: 'Title', name: 'title', widget: 'string', required: true }
@@ -74,33 +101,6 @@ collections:
       - { label: 'Price', name: 'price', widget: 'number', required: true }
       - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
       - { label: 'Content', name: 'content', widget: 'markdown', required: true }
-  - name: 'work'
-    label: 'Work'
-    label_singular: 'work'
-    folder: 'content/work'
-    create: true
-    format: 'frontmatter'
-    slug: '{{slug}}'
-    preview_path: 'work/{{slug}}'
-    fields:
-      - {
-          label: 'Work Category',
-          name: 'category',
-          widget: 'select',
-          multiple: true,
-          default: 'mixing',
-          options:
-            [
-              { label: 'Mixing', value: 'mixing' },
-              { label: 'Boom', value: 'boom' },
-              { label: 'Foley', value: 'foley' },
-              { label: 'Post', value: 'post' },
-            ],
-        }
-      - { label: 'Title', name: 'title', widget: 'string', required: true }
-      - { label: 'Sub-Title', name: 'subtitle', widget: 'string', required: true }
-      - { label: 'Cover Image', name: 'cover', widget: 'image', required: true, allow_multiple: false }
-      - { label: 'Content', name: 'body', widget: 'markdown', required: true }
   - name: 'jokes'
     label: 'Jokes'
     label_singular: 'Joke'
