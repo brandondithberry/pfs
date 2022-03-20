@@ -18,7 +18,7 @@ collections:
     files:
       - label: 'Info'
         name: 'info'
-        file: 'content/site/info.json'
+        file: 'content/settings/info.json'
         format: 'json'
         editor:
           preview: false
@@ -95,7 +95,7 @@ collections:
     files:
       - label: 'Content'
         name: 'content'
-        file: 'site/content/about.yml'
+        file: 'content/about/content.json'
         fields:
           - { label: 'Title', name: 'title', widget: 'string', required: true }
           - { label: 'Intro', name: 'intro', widget: 'string', required: true }
