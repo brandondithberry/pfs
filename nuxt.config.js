@@ -1,5 +1,4 @@
-import * as SITE_INFO from './content/site/info.json'
-import { COLOR_MODE_FALLBACK } from './utils/globals.js'
+import * as SITE_INFO from './content/settings/info.json'
 
 export default {
   target: 'static',
@@ -126,17 +125,6 @@ export default {
         /token/,
         /^vue-content-placeholders/
       ]
-    }
-  },
-  colorMode: {
-    classSuffix: '',
-    preference: 'system', // default value of $colorMode.preference
-    fallback: COLOR_MODE_FALLBACK, // fallback value if not system preference found
-    componentName: 'ColorScheme',
-    cookie: {
-      options: {
-        sameSite: 'lax'
-      }
     }
   },
   pwa: {
