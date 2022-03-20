@@ -10,7 +10,7 @@
       <div class="right" :style="{ backgroundImage: `url(${cover})` }"></div>
     </section>
     <section class="body">
-      <div class="left" :style="{ backgroundImage: `url(${cover})` }"></div>
+      <div class="left" :style="{ backgroundImage: `url(${bodyimage})` }"></div>
       <div class="right">
         <p>{{ body }}</p>
       </div>
@@ -25,7 +25,7 @@
 
 <style lang="postcss" scoped>
 section {
-  @apply flex w-full place-content-center justify-between flex-row bg-primary-800;
+  @apply flex w-full place-content-center justify-between flex-row bg-primary-800 p-6;
 }
 
 .intro {
@@ -101,6 +101,7 @@ export default {
       title: about.title,
       intro: about.intro,
       cover: about.cover,
+      bodyimage: about.bodyimage,
       body: about.body,
       gallery: about.galleryImages,
     }
