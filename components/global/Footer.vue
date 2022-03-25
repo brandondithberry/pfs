@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="connect">
-      <nuxt-link to="/"><img class="logo" src="img/logo.png" alt="Pro Film Sound Logo" /></nuxt-link>
+      <nuxt-link to="/"><img class="logo" src="~/static/img/logo.png" alt="Pro Film Sound Logo" /></nuxt-link>
       <p>
         Call or text for questions.<br />
         <a href="tel:19403674447">940-367-4447</a>

@@ -2,8 +2,10 @@
   <main>
     <section class="hero">
       <div class="text">
-        <h1>Professional Film & TV<br />Mixing + Gear Rentals</h1>
-        <h4>Based in Spokane, Washington</h4>
+        <h1 class="max-w-2xl m-auto border-b-2 border-white pb-6">
+          Production Film & TV Sound Mixing & Location Sound Recording + Gear Rentals
+        </h1>
+        <h4>Based in Spokane, Washington<br />Available for International Travel</h4>
       </div>
     </section>
     <section class="jokes" id="joke">
@@ -96,7 +98,7 @@
     url('https://images.unsplash.com/photo-1632187981988-40f3cbaeef5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=2400&q=100');
   .text {
     @apply text-white text-center py-40;
-    background: linear-gradient(45deg, #000000dd, #00000000);
+    background: linear-gradient(45deg, #000000ff, #00000033);
   }
 }
 
@@ -158,6 +160,7 @@ import Carousel from '~/components/carousel/Carousel.vue'
 import Slide from '~/components/carousel/Slide.vue'
 
 export default {
+  transition: 'home',
   async asyncData({ $content, error }) {
     let jokes
     try {

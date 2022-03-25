@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <main>
     <div class="left">
       <h1>Contact</h1>
       <p class="text-xl">
@@ -22,11 +22,11 @@
       </form>
     </div>
     <div class="right"></div>
-  </section>
+  </main>
 </template>
 
 <style lang="postcss" scoped>
-section {
+main {
   @apply flex w-full place-content-center justify-between flex-row bg-primary-800;
 
   .left {

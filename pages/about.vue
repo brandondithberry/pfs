@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main>
     <section class="intro">
       <div class="left">
         <h1>{{ title }}</h1>
@@ -17,25 +17,25 @@
     </section>
     <section v-if="gallery.length > 0" class="gallery">
       <div v-for="(image, index) in gallery" :key="index">
-        <div class="img" :style="{ backgroundImage: `url(${image})` }"></div>
+        <a :href="image"><div class="img" :style="{ backgroundImage: `url(${image})` }"></div></a>
       </div>
     </section>
-  </div>
+  </main>
 </template>
 
 <style lang="postcss" scoped>
 section {
-  @apply flex w-full place-content-center justify-between flex-row bg-primary-800 p-6;
+  @apply flex w-full place-content-center justify-between flex-col bg-primary-800 p-6 md:flex-row;
 }
 
 .intro {
   .left {
-    @apply w-2/3 p-20;
+    @apply pb-6 md:w-2/3 md:p-20;
   }
 
   .right {
-    @apply w-1/3;
-    background: no-repeat center right;
+    @apply h-48 md:w-1/3 md:h-auto;
+    background: no-repeat center center;
     background-size: cover;
   }
 
@@ -45,24 +45,24 @@ section {
 }
 
 .body {
-  @apply bg-secondary-100;
+  @apply bg-secondary-100 flex-col-reverse md:flex-row;
 
   .left {
-    @apply w-1/3;
+    @apply h-48 md:w-1/3 md:h-auto;
     background: no-repeat center right;
     background-size: cover;
   }
 
   .right {
-    @apply w-2/3 p-20 text-dark;
+    @apply pb-6 text-dark md:w-2/3 md:p-20;
   }
 }
 
 .gallery {
-  @apply grid grid-cols-2 md:grid-cols-4 gap-6 p-6;
+  @apply grid grid-cols-2 gap-6 p-6 md:grid-cols-4;
 
   .img {
-    @apply grid w-full h-48;
+    @apply grid w-full h-28 md:h-48;
     background: no-repeat center center;
     background-size: cover;
   }

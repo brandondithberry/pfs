@@ -13,9 +13,6 @@
       </nuxt-link>
     </div>
   </section>
-  <p v-else class="max-w-5xl mx-auto">
-    {{ amount > 1 ? 'Posts not found' : 'Post not found' }}
-  </p>
 </template>
 
 <script>

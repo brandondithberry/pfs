@@ -17,7 +17,7 @@
         <button class="btn alt lg:hidden">MENU</button>
       </div>
     </section>
-    <section class="announcement"><span>For Booking Call/Text (940) 367-4447</span></section>
+    <section class="announcement"><span>For Booking Call or Text (940) 367-4447</span></section>
   </header>
 </template>
 
@@ -50,7 +50,7 @@ header {
 }
 
 .announcement {
-  @apply bg-secondary-800 text-white p-4 text-center uppercase tracking-widest font-bold;
+  @apply text-base bg-secondary-800 text-white p-4 text-center uppercase tracking-widest font-bold;
 }
 </style>
 
