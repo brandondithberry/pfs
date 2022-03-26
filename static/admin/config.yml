@@ -81,7 +81,7 @@ collections:
               - label: 'Types'
                 name: 'types'
                 widget: 'list'
-                summary: '{{fields.type}}'
+                summary: '{{fields.type}} - {{fields.pricing}}'
                 fields:
                   - { label: 'Type', name: type, widget: string }
                   - { label: 'Pricing', name: 'pricing', widget: string }
@@ -102,7 +102,7 @@ collections:
                   - label: Items
                     name: items
                     widget: 'list'
-                    summary: '{{fields.name}}'
+                    summary: '{{fields.name}} - {{fields.price}}'
                     fields:
                     - { label: 'Name', name: name, widget: string }
                     - { label: 'Price', name: price, widget: string }
