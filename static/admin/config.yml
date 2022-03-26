@@ -87,16 +87,16 @@ collections:
                   field: { label: Name, name: name, widget: string },
                   field: { label: Price, name: price, widget: string },
                 }
-              - { label: 'Rentals Title', name: 'rentalstitle', widget: 'string', required: true }
-              - { label: 'Rentals Sub-Title', name: 'rentalssubtitle', widget: 'string', required: true }
-              - { label: 'Rentals Cover Image', name: 'rentalscover', widget: 'image', required: true, allow_multiple: false }
           - label: "Rentals"
             name: 'rentals'
             widget: 'object'
             fields:
+              - { label: 'Title', name: 'title', widget: 'string', required: true }
+              - { label: 'Sub-Title', name: 'subtitle', widget: 'string', required: true }
+              - { label: 'Cover Image', name: 'cover', widget: 'image', required: true, allow_multiple: false }
               - {
-                  label: 'Types',
-                  name: 'types',
+                  label: 'Categories',
+                  name: 'categories',
                   widget: 'list',
                   summary: '{{fields.image}}',
                   add_to_top: true,
