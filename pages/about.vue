@@ -12,12 +12,14 @@
     <section class="body">
       <div class="left" :style="{ backgroundImage: `url(${bodyimage})` }"></div>
       <div class="right">
-        <p>{{ body }}</p>
+        <p class="text-md">{{ body }}</p>
       </div>
     </section>
     <section v-if="gallery.length > 0" class="gallery">
       <div v-for="(image, index) in gallery" :key="index">
-        <a :href="image"><div class="img" :style="{ backgroundImage: `url(${image})` }"></div></a>
+        <nuxt-link :to="`${image}`"
+          ><div class="img" :style="{ backgroundImage: `url(${image})` }"></div
+        ></nuxt-link>
       </div>
     </section>
   </main>
@@ -30,7 +32,7 @@ section {
 
 .intro {
   .left {
-    @apply pb-6 md:w-2/3 md:p-20;
+    @apply pb-6 md:w-2/3 md:p-36;
   }
 
   .right {
@@ -54,7 +56,7 @@ section {
   }
 
   .right {
-    @apply pb-6 text-dark md:w-2/3 md:p-20;
+    @apply pb-6 text-dark md:w-2/3 md:p-36;
   }
 }
 
