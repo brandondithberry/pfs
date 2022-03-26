@@ -78,8 +78,7 @@ collections:
               - { label: 'Title', name: 'title', widget: 'string', required: true }
               - { label: 'Sub-Title', name: 'subtitle', widget: 'string', required: true }
               - { label: 'Cover Image', name: 'cover', widget: 'image', required: true, allow_multiple: false }
-              - {
-                  label: 'Types',
+              - { label: 'Types',
                   name: 'types',
                   widget: 'list',
                   summary: '{{fields.name}}',
@@ -94,15 +93,13 @@ collections:
               - { label: 'Title', name: 'title', widget: 'string', required: true }
               - { label: 'Sub-Title', name: 'subtitle', widget: 'string', required: true }
               - { label: 'Cover Image', name: 'cover', widget: 'image', required: true, allow_multiple: false }
-              - {
-                  label: 'Categories',
+              - { label: 'Categories',
                   name: 'categories',
                   widget: 'list',
                   summary: '{{fields.image}}',
                   add_to_top: true,
                   field: { label: Name, name: name, widget: string },
-                  field: {
-                    label: 'Items',
+                  field: { label: 'Items',
                     name: 'Items',
                     widget: 'list',
                     summary: '{{fields.image}}',
