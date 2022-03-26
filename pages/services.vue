@@ -1,7 +1,7 @@
 <template>
   <main class="flex gap-4 py-4">
     <h1 class="hidden">
-      Production Sound Mixing & Location Sound Recording with Sound Mixing & Recording Kit Rentals<
+      Production Sound Mixing & Location Sound Recording with Sound Mixing & Recording Kit Rentals
     </h1>
     <section class="mixing">
       <div class="intro" :style="{ backgroundImage: `url('img/272701578_758037662254380_7792244682493182394_n.jpg')` }">
@@ -139,7 +139,7 @@
     @apply p-10 bg-secondary-700;
 
     li {
-      @apply leading-relaxed;
+      @apply leading-relaxed; 
     }
   }
 }

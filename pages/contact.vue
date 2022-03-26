@@ -3,8 +3,8 @@
     <div class="left">
       <h1>Contact</h1>
       <p class="text-xl">
-        If you'd like to learn more about my services and pricing, please visit either the
-        <a href="/mixing">Mixing</a> or <a href="/rentals">Rentals</a> pages. If you'd like to book, please call or text
+        If you'd like to learn more about my services and pricing, please visit the
+        <a href="/services">Services</a> page. If you'd like to book, please call or text
         <a href="tel:19403674447">940-367-4447</a>. For all other questions, please use the form below.
       </p>
       <br />
@@ -30,7 +30,7 @@ main {
   @apply flex w-full place-content-center justify-between flex-row bg-primary-800;
 
   .left {
-    @apply w-2/3 p-20;
+    @apply w-2/3 p-16;
   }
 
   .right {

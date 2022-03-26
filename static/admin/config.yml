@@ -64,32 +64,52 @@ collections:
       - { label: 'Sub-Title', name: 'subtitle', widget: 'string', required: true }
       - { label: 'Cover Image', name: 'cover', widget: 'image', required: true, allow_multiple: false }
       - { label: 'Content', name: 'body', widget: 'markdown', required: true }
-  - name: 'mixing'
-    label: 'Mixing'
-    label_singular: 'mixing'
-    folder: 'content/mixing'
-    create: true
-    format: 'frontmatter'
-    slug: '{{slug}}'
-    preview_path: 'mixing/{{slug}}'
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string', required: true }
-      - { label: 'Price', name: 'price', widget: 'number', required: true }
-      - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
-      - { label: 'Content', name: 'content', widget: 'markdown', required: true }
-  - name: 'rentals'
-    label: 'Rentals'
-    label_singular: 'rental'
-    folder: 'content/rentals'
-    create: true
-    format: 'frontmatter'
-    slug: '{{slug}}'
-    preview_path: 'rentals/{{slug}}'
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string', required: true }
-      - { label: 'Price', name: 'price', widget: 'number', required: true }
-      - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
-      - { label: 'Content', name: 'content', widget: 'markdown', required: true }
+  - name: 'services'
+    label: 'Services'
+    files:
+      - label: 'Content'
+        name: 'content'
+        file: 'content/services/content.json'
+        - label: "Mixing"
+          name: 'mixing'
+          widget: 'object'
+          fields:
+            - { label: 'Title', name: 'title', widget: 'string', required: true }
+            - { label: 'Sub-Title', name: 'subtitle', widget: 'string', required: true }
+            - { label: 'Cover Image', name: 'cover', widget: 'image', required: true, allow_multiple: false }
+            - {
+                label: 'Types',
+                name: 'types',
+                widget: 'list',
+                summary: '{{fields.name}}',
+                add_to_top: true,
+                field: { label: Name, name: name, widget: string },
+                field: { label: Price, name: price, widget: string },
+              }
+            - { label: 'Rentals Title', name: 'rentalstitle', widget: 'string', required: true }
+            - { label: 'Rentals Sub-Title', name: 'rentalssubtitle', widget: 'string', required: true }
+            - { label: 'Rentals Cover Image', name: 'rentalscover', widget: 'image', required: true, allow_multiple: false }
+        - label: "Rentals"
+          name: 'rentals'
+          widget: 'object'
+          fields:
+            - {
+                label: 'Types',
+                name: 'types',
+                widget: 'list',
+                summary: '{{fields.image}}',
+                add_to_top: true,
+                field: { label: Name, name: name, widget: string },
+                field: {
+                  label: 'Items',
+                  name: 'Items',
+                  widget: 'list',
+                  summary: '{{fields.image}}',
+                  add_to_top: true,
+                  field: { label: Name, name: name, widget: string },
+                  field: { label: Price, name: price, widget: number },
+                },
+              }
   - name: 'about'
     label: 'About'
     files:

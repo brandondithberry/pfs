@@ -7,11 +7,11 @@
       <div class="menu">
         <nav>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/work">Work</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><nuxt-link to="/">Home</nuxt-link></li>
+            <li><nuxt-link to="/work">Work</nuxt-link></li>
+            <li><nuxt-link to="/services">Services</nuxt-link></li>
+            <li><nuxt-link to="/about">About</nuxt-link></li>
+            <li><nuxt-link to="/contact">Contact</nuxt-link></li>
           </ul>
         </nav>
         <button class="btn alt lg:hidden">MENU</button>
