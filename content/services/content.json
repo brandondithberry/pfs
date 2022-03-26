@@ -1,0 +1,142 @@
+{
+  "mixing": {
+    "title": "Production Sound Mixing & Location Sound Recording",
+    "subtitle": "Starting at $800/day + Kit Fees",
+    "cover": "/img/272701578_758037662254380_7792244682493182394_n.jpg",
+    "types": [
+      {
+        "type": "Scripted & Unscripted TV",
+        "pricing": "Starting at $800/day"
+      },
+      {
+        "type": "Narrative Film",
+        "pricing": "Starting at $800/day"
+      },
+      {
+        "type": "International Travel",
+        "pricing": "Starting at $1,200/day"
+      }
+    ]
+  },
+  "rentals": {
+    "cover": "/img/boom-mic.jpg",
+    "title": "Sound Mixing & Recording Kit Rentals",
+    "subtitle": "Same-Day Delivery and Pickup Offered, 3-Day Weeks",
+    "categories": [
+      {
+        "name": "Timecode",
+        "items": [
+          {
+            "name": "3x Tentacle Sync-E boxes",
+            "price": "$35/day"
+          },
+          {
+            "name": "3x Tentacle to TRS 3.5mm",
+            "price": "included"
+          },
+          {
+            "name": "2x Tentacle to BNC",
+            "price": "$3/day"
+          },
+          {
+            "name": "2x Tentacle to 4-pin mini Lemo (for RED camera)",
+            "price": "$7/day"
+          }
+        ]
+      },
+      {
+        "name": "Wireless & IFB",
+        "items": [
+          {
+            "name": "7x Sennheiser evolution wireless channels (2xG2, 4xG3, 1xG4)",
+            "price": "$45/day"
+          },
+          {
+            "name": "1x Sennheiser G4 SKP 100 transmitter",
+            "price": "$30/day"
+          },
+          {
+            "name": "2x URSA LG waist strap",
+            "price": "$1/day"
+          },
+          {
+            "name": "2x URSA thigh strap",
+            "price": "$1/day"
+          },
+          {
+            "name": "2x URSA calf strap",
+            "price": "$1/day"
+          }
+        ]
+      },
+      {
+        "name": "Boom Pole",
+        "items": [
+          {
+            "name": "1x K-tek Klassic K230CCR 19'4\"",
+            "price": "$65/day"
+          },
+          {
+            "name": "1x K-tek KE-89CC 7'6\"",
+            "price": "$25/day"
+          },
+          {
+            "name": "2x Rycote shock mounts",
+            "price": "$5/day"
+          }
+        ]
+      },
+      {
+        "name": "Microphone",
+        "items": [
+          {
+            "name": "5x Deity W.lav Pro (w/ Sennheiser microdots)",
+            "price": "$15/day"
+          },
+          {
+            "name": "1x RØDE NT5",
+            "price": "$35/day"
+          },
+          {
+            "name": "1x MJE-384K Oktavamod capsule for NT5",
+            "price": "$25/day"
+          },
+          {
+            "name": "1x RØDE NT1000 large diaphragm",
+            "price": "$40/day"
+          },
+          {
+            "name": "1x Electro-Voice RE50B (standard newscaster handheld)",
+            "price": "$25/day"
+          }
+        ]
+      },
+      {
+        "name": "Weather Gear",
+        "items": [
+          {
+            "name": "1x Remote Audio RAINMAN blimp cover",
+            "price": "$30/day"
+          },
+          {
+            "name": "1x RØDE blimp (older style)",
+            "price": "$20/day"
+          }
+        ]
+      },
+      {
+        "name": "Headphones",
+        "items": [
+          {
+            "name": "1x Sony MDR-7506 monitor",
+            "price": "$10/day"
+          },
+          {
+            "name": "1x Halter Technical Elite monitor",
+            "price": "$7/day"
+          }
+        ]
+      }
+    ]
+  }
+}
