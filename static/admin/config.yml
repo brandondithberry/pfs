@@ -70,46 +70,47 @@ collections:
       - label: 'Content'
         name: 'content'
         file: 'content/services/content.json'
-        - label: "Mixing"
-          name: 'mixing'
-          widget: 'object'
-          fields:
-            - { label: 'Title', name: 'title', widget: 'string', required: true }
-            - { label: 'Sub-Title', name: 'subtitle', widget: 'string', required: true }
-            - { label: 'Cover Image', name: 'cover', widget: 'image', required: true, allow_multiple: false }
-            - {
-                label: 'Types',
-                name: 'types',
-                widget: 'list',
-                summary: '{{fields.name}}',
-                add_to_top: true,
-                field: { label: Name, name: name, widget: string },
-                field: { label: Price, name: price, widget: string },
-              }
-            - { label: 'Rentals Title', name: 'rentalstitle', widget: 'string', required: true }
-            - { label: 'Rentals Sub-Title', name: 'rentalssubtitle', widget: 'string', required: true }
-            - { label: 'Rentals Cover Image', name: 'rentalscover', widget: 'image', required: true, allow_multiple: false }
-        - label: "Rentals"
-          name: 'rentals'
-          widget: 'object'
-          fields:
-            - {
-                label: 'Types',
-                name: 'types',
-                widget: 'list',
-                summary: '{{fields.image}}',
-                add_to_top: true,
-                field: { label: Name, name: name, widget: string },
-                field: {
-                  label: 'Items',
-                  name: 'Items',
+        fields:
+          - label: "Mixing"
+            name: 'mixing'
+            widget: 'object'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string', required: true }
+              - { label: 'Sub-Title', name: 'subtitle', widget: 'string', required: true }
+              - { label: 'Cover Image', name: 'cover', widget: 'image', required: true, allow_multiple: false }
+              - {
+                  label: 'Types',
+                  name: 'types',
+                  widget: 'list',
+                  summary: '{{fields.name}}',
+                  add_to_top: true,
+                  field: { label: Name, name: name, widget: string },
+                  field: { label: Price, name: price, widget: string },
+                }
+              - { label: 'Rentals Title', name: 'rentalstitle', widget: 'string', required: true }
+              - { label: 'Rentals Sub-Title', name: 'rentalssubtitle', widget: 'string', required: true }
+              - { label: 'Rentals Cover Image', name: 'rentalscover', widget: 'image', required: true, allow_multiple: false }
+          - label: "Rentals"
+            name: 'rentals'
+            widget: 'object'
+            fields:
+              - {
+                  label: 'Types',
+                  name: 'types',
                   widget: 'list',
                   summary: '{{fields.image}}',
                   add_to_top: true,
                   field: { label: Name, name: name, widget: string },
-                  field: { label: Price, name: price, widget: number },
-                },
-              }
+                  field: {
+                    label: 'Items',
+                    name: 'Items',
+                    widget: 'list',
+                    summary: '{{fields.image}}',
+                    add_to_top: true,
+                    field: { label: Name, name: name, widget: string },
+                    field: { label: Price, name: price, widget: number },
+                  },
+                }
   - name: 'about'
     label: 'About'
     files:
