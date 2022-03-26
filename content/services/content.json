@@ -1,0 +1,26 @@
+{
+  "mixing": {
+    "title": "Production Sound Mixing & Location Sound Recording",
+    "subtitle": "Starting at $800/day + Kit Fees",
+    "cover": "/img/272701578_758037662254380_7792244682493182394_n.jpg",
+    "types": [
+      {
+        "type": "Scripted & Unscripted TV",
+        "pricing": "Starting at $800/day"
+      },
+      {
+        "type": "Narrative Film",
+        "pricing": "Starting at $800/day"
+      },
+      {
+        "type": "International Travel",
+        "pricing": "Starting at $1,200/day"
+      }
+    ]
+  },
+  "rentals": {
+    "cover": "/img/boom-mic.jpg",
+    "title": "Sound Mixing & Recording Kit Rentals",
+    "subtitle": "Same-Day Delivery and Pickup Offered, 3-Day Weeks"
+  }
+}
