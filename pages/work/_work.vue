@@ -1,21 +1,23 @@
 <template>
-  <main>
-    <section v-if="post">
+  <div class="flex w-full">
+    <main class="w-3/4 bg-primary-700">
+      <article v-if="post" class="w-full py-10">
+        <h1 class="">{{ post.title }}</h1>
+        <h6>
+          {{ post.subtitle }} • <span v-if="post.createdAt">{{ formatDate(post.createdAt) }}</span>
+        </h6>
+        <p class="mt-1 mb-4">
+          {{ post.description }}
+        </p>
+        <nuxt-content :document="post" />
+      </article>
+    </main>
+    <aside class="w-1/4 bg-primary-800">
       <nav class="m-4" aria-label="go back">
         <router-back class="block" />
       </nav>
-
-      <article class="p-4">
-        <h1 class="">{{ post.title }}</h1>
-        <h4 class="text-xl">{{ post.subtitle }}</h4>
-        <p class="mt-1 mb-4 text-primary-600 dark:text-primary-400">{{ post.description }}</p>
-        <nuxt-content :document="post" />
-        <h5 v-if="post.createdAt" class="text-right">
-          {{ formatDate(post.createdAt) }}
-        </h5>
-      </article>
-    </section>
-  </main>
+    </aside>
+  </div>
 </template>
 
 <script>

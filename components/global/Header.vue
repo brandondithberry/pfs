@@ -7,9 +7,9 @@
       <div class="menu">
         <nav>
           <ul>
+            <li><a href="/">Home</a></li>
             <li><a href="/work">Work</a></li>
-            <li><a href="/mixing">Mixing</a></li>
-            <li><a href="/rentals">Rentals</a></li>
+            <li><a href="/services">Services</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>

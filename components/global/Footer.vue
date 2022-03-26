@@ -12,24 +12,10 @@
       <h5>Navigate</h5>
       <nav>
         <ul>
-          <li><a href="/">Work</a></li>
-          <li><a href="/">Rentals</a></li>
-          <li><a href="/">Mixing</a></li>
-        </ul>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/">About</a></li>
-          <li><a href="/">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="connect">
-      <h5>Connect</h5>
-      <nav>
-        <ul>
-          <li><a href="/">Facebook</a></li>
-          <li><a href="https://instagram.com/adamcterrell">Instagram</a></li>
-          <li><a href="https://www.youtube.com/user/atomterrible">YouTube</a></li>
+          <li><nuxt-link to="/work">Work</nuxt-link></li>
+          <li><nuxt-link to="/services">Services</nuxt-link></li>
+          <li><nuxt-link to="/about">About</nuxt-link></li>
+          <li><nuxt-link to="/contact">Contact</nuxt-link></li>
         </ul>
       </nav>
     </div>
@@ -40,6 +26,15 @@
           <li><a href="/">Work Agreement</a></li>
           <li><a href="/">Privacy Policy</a></li>
           <li><a href="/">Terms of Service</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="connect">
+      <h5>Connect</h5>
+      <nav>
+        <ul>
+          <li><a href="https://instagram.com/adamcterrell">Instagram</a></li>
+          <li><a href="https://www.youtube.com/user/atomterrible">YouTube</a></li>
         </ul>
       </nav>
     </div>
@@ -61,10 +56,6 @@ footer {
   .menu {
     nav {
       @apply flex w-full place-content-stretch place-items-stretch gap-10;
-
-      ul {
-        @apply w-1/2;
-      }
     }
   }
 
