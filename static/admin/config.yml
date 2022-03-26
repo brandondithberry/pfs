@@ -96,7 +96,6 @@ collections:
                 name: categories
                 widget: 'list'
                 summary: '{{fields.name}}'
-                add_to_top: true,
                 fields:
                   - { label: 'Name', name: name, widget: string }
                   - label: Items
