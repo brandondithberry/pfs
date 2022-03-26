@@ -75,10 +75,11 @@ collections:
             name: 'mixing'
             widget: 'object'
             fields:
-              - { label: 'Title', name: 'title', widget: 'string', required: true }
-              - { label: 'Sub-Title', name: 'subtitle', widget: 'string', required: true }
-              - { label: 'Cover Image', name: 'cover', widget: 'image', required: true, allow_multiple: false }
-              - { label: 'Types',
+              - { label: 'Mixing Title', name: 'mixingtitle', widget: 'string', required: true }
+              - { label: 'Mixing Sub-Title', name: 'mixingsubtitle', widget: 'string', required: true }
+              - { label: 'Cover Image', name: 'mixingcover', widget: 'image', required: true, allow_multiple: false }
+              - { 
+                  label: 'Types',
                   name: 'types',
                   widget: 'list',
                   summary: '{{fields.name}}',
@@ -90,9 +91,9 @@ collections:
             name: 'rentals'
             widget: 'object'
             fields:
-              - { label: 'Title', name: 'title', widget: 'string', required: true }
-              - { label: 'Sub-Title', name: 'subtitle', widget: 'string', required: true }
-              - { label: 'Cover Image', name: 'cover', widget: 'image', required: true, allow_multiple: false }
+              - { label: 'Rentals Title', name: 'rentalstitle', widget: 'string', required: true }
+              - { label: 'Rentals Sub-Title', name: 'rentalssubtitle', widget: 'string', required: true }
+              - { label: 'Rentals Cover Image', name: 'rentalscover', widget: 'image', required: true, allow_multiple: false }
               - { label: 'Categories',
                   name: 'categories',
                   widget: 'list',
