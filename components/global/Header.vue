@@ -2,16 +2,16 @@
   <header>
     <section class="head">
       <div class="logo">
-        <nuxt-link to="/"><img src="~/static/img/logo.png" alt="Pro Film Sound Logo" /></nuxt-link>
+        <nuxt-link to="/"><img src="img/logo.png" alt="Pro Film Sound Logo" /></nuxt-link>
       </div>
       <div class="menu">
         <nav>
           <ul>
             <li><nuxt-link to="/">Home</nuxt-link></li>
-            <li><nuxt-link to="/work">Work</nuxt-link></li>
-            <li><nuxt-link to="/services">Services</nuxt-link></li>
-            <li><nuxt-link to="/about">About</nuxt-link></li>
-            <li><nuxt-link to="/contact">Contact</nuxt-link></li>
+            <li><nuxt-link to="work">Work</nuxt-link></li>
+            <li><nuxt-link to="services">Services</nuxt-link></li>
+            <li><nuxt-link to="about">About</nuxt-link></li>
+            <li><nuxt-link to="contact">Contact</nuxt-link></li>
           </ul>
         </nav>
         <button class="btn alt lg:hidden">MENU</button>

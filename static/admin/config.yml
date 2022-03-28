@@ -13,30 +13,14 @@ public_folder: /img
 
 # Docs: https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
-  - label: 'Settings'
-    name: 'settings'
-    files:
-      - label: 'Info'
-        name: 'info'
-        file: 'content/settings/info.json'
-        format: 'json'
-        editor:
-          preview: false
-        fields:
-          - { label: Site Name, name: sitename, widget: string, hint: 'This is used for the site title' }
-          - {
-              label: Site Description,
-              name: sitedescription,
-              widget: string,
-              hint: 'This is used as descriptive text for links that link to this site',
-            }
-          - {
-              label: Site Language,
-              name: sitelang,
-              widget: string,
-              pattern: ['^[a-z]{2}([-])?([A-Za-z]{2})?$', 'Must match "xx" or "xx-XX" syntax (ex. "en" or "sv-SE")'],
-            }
-          # - { label: Site Email, name: siteemail, widget: string, required: false }
+  - name: 'jokes'
+    label: 'Jokes'
+    label_singular: 'Joke'
+    folder: 'content/jokes'
+    create: true
+    format: 'frontmatter'
+    fields:
+      - { label: 'Joke', name: 'joke', widget: string, required: true }
   - name: 'work'
     label: 'Work'
     label_singular: 'work'
@@ -125,11 +109,40 @@ collections:
               add_to_top: true,
               field: { label: Image, name: image, widget: image },
             }
-  - name: 'jokes'
-    label: 'Jokes'
-    label_singular: 'Joke'
-    folder: 'content/jokes'
-    create: true
-    format: 'frontmatter'
-    fields:
-      - { label: 'Joke', name: 'joke', widget: string, required: true }
+  - name: 'policies'
+    label: 'Policies'
+    files:
+      - label: 'Privacy Policy'
+        name: 'privacypolicy'
+        file: 'content/policies/privacy-policy.json'
+        fields:
+          - { label: 'Content', name: 'content', widget: 'markdown', required: true }
+      - label: 'Terms of Service'
+        name: 'termsofservices'
+        file: 'content/policies/terms-of-service.json'
+        fields:
+          - { label: 'Content', name: 'content', widget: 'markdown', required: true }
+  - label: 'Settings'
+    name: 'settings'
+    files:
+      - label: 'Info'
+        name: 'info'
+        file: 'content/settings/info.json'
+        format: 'json'
+        editor:
+          preview: false
+        fields:
+          - { label: Site Name, name: sitename, widget: string, hint: 'This is used for the site title' }
+          - {
+              label: Site Description,
+              name: sitedescription,
+              widget: string,
+              hint: 'This is used as descriptive text for links that link to this site',
+            }
+          - {
+              label: Site Language,
+              name: sitelang,
+              widget: string,
+              pattern: ['^[a-z]{2}([-])?([A-Za-z]{2})?$', 'Must match "xx" or "xx-XX" syntax (ex. "en" or "sv-SE")'],
+            }
+          # - { label: Site Email, name: siteemail, widget: string, required: false }

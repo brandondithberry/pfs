@@ -47,10 +47,6 @@ export default {
     this.posts = await this.fetchPosts()
   },
   methods: {
-    formatDate(dateString) {
-      const date = new Date(dateString)
-      return date.toLocaleDateString(process.env.lang) || ''
-    },
     async fetchPosts(postType = this.postType, amount = this.amount, sortBy = this.sortBy) {
       return this.$content(postType)
         .sortBy(sortBy.key, sortBy.direction)

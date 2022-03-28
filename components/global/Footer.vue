@@ -12,10 +12,10 @@
       <h5>Navigate</h5>
       <nav>
         <ul>
-          <li><nuxt-link to="/work">Work</nuxt-link></li>
-          <li><nuxt-link to="/services">Services</nuxt-link></li>
-          <li><nuxt-link to="/about">About</nuxt-link></li>
-          <li><nuxt-link to="/contact">Contact</nuxt-link></li>
+          <li><nuxt-link to="work">Work</nuxt-link></li>
+          <li><nuxt-link to="services">Services</nuxt-link></li>
+          <li><nuxt-link to="about">About</nuxt-link></li>
+          <li><nuxt-link to="contact">Contact</nuxt-link></li>
         </ul>
       </nav>
     </div>
@@ -23,9 +23,8 @@
       <h5>Policies</h5>
       <nav>
         <ul>
-          <li><a href="/">Work Agreement</a></li>
-          <li><a href="/">Privacy Policy</a></li>
-          <li><a href="/">Terms of Service</a></li>
+          <li><nuxt-link to="privacy-policy">Privacy Policy</nuxt-link></li>
+          <li><nuxt-link to="terms-of-service">Terms of Service</nuxt-link></li>
         </ul>
       </nav>
     </div>
@@ -33,8 +32,8 @@
       <h5>Connect</h5>
       <nav>
         <ul>
-          <li><a href="https://instagram.com/adamcterrell">Instagram</a></li>
-          <li><a href="https://www.youtube.com/user/atomterrible">YouTube</a></li>
+          <li><a href="https://instagram.com/adamcterrell" target="_blank">Instagram</a></li>
+          <li><a href="https://www.youtube.com/user/atomterrible" target="_blank">YouTube</a></li>
         </ul>
       </nav>
     </div>
