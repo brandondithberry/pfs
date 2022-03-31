@@ -3,7 +3,7 @@
     <section class="hero">
       <div class="text">
         <h1 class="max-w-2xl m-auto border-b-2 border-white pb-6">
-          Production Film & TV Sound Mixing & Location Sound Recording + Gear Rentals
+          Production Film & TV Sound Mixing, Location Sound Recording, and Gear Rentals
         </h1>
         <h4>Based in Spokane, Washington<br />Available for International Travel</h4>
       </div>

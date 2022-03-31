@@ -17,9 +17,7 @@
     </section>
     <section v-if="gallery.length > 0" class="gallery">
       <div v-for="(image, index) in gallery" :key="index">
-        <nuxt-link :to="`${image}`"
-          ><div class="img" :style="{ backgroundImage: `url(${image})` }"></div
-        ></nuxt-link>
+        <div class="img" :style="{ backgroundImage: `url(${image})` }"></div>
       </div>
     </section>
   </main>
@@ -27,12 +25,12 @@
 
 <style lang="postcss" scoped>
 section {
-  @apply flex w-full place-content-center justify-between flex-col bg-primary-800 p-6 md:flex-row;
+  @apply flex w-full place-content-center justify-between flex-col bg-primary-800 p-6 lg:flex-row;
 }
 
 .intro {
   .left {
-    @apply pb-6 md:w-2/3 md:p-36;
+    @apply pb-6 md:w-2/3  lg:py-36 lg:px-10 lg:max-w-[600px];
   }
 
   .right {
@@ -47,7 +45,7 @@ section {
 }
 
 .body {
-  @apply bg-secondary-100 flex-col-reverse md:flex-row;
+  @apply bg-secondary-100 flex-col-reverse lg:flex-row;
 
   .left {
     @apply h-48 md:w-1/3 md:h-auto;
@@ -56,7 +54,7 @@ section {
   }
 
   .right {
-    @apply pb-6 text-dark md:w-2/3 md:p-36;
+    @apply pb-6 text-dark md:w-2/3 lg:py-36 lg:px-10 lg:max-w-[600px];
   }
 }
 

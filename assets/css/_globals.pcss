@@ -20,3 +20,12 @@ body {
 a.nuxt-link-exact-active {
   @apply text-accent;
 }
+
+.nuxt-content h1 > a::before,
+.nuxt-content h2 > a::before,
+.nuxt-content h3 > a::before,
+.nuxt-content h4 > a::before,
+.nuxt-content h5 > a::before,
+.nuxt-content h6 > a::before {
+  display: none;
+}
