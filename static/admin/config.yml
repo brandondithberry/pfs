@@ -114,7 +114,7 @@ collections:
     files:
       - label: 'Privacy Policy'
         name: 'privacypolicy'
-        file: 'content/policies/privacy-policy.json'
+        file: 'content/policies/privacy-policy.md'
         fields:
           - { label: 'Content', name: 'content', widget: 'markdown', required: true }
       - label: 'Terms of Service'
