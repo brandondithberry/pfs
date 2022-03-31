@@ -1,24 +1,23 @@
 <template>
   <main>
-    <section>
-      <h1>Privacy Policy</h1>
-      <div>
-        <nuxt-content :document="policy" />
-      </div>
-    </section>
+    <h1>Privacy Policy</h1>
+    <nuxt-content :document="doc" />
   </main>
 </template>
 
 <script>
 export default {
-  async asyncData({ $content, params}) {
-    const doc = await $content('policies/privacy-policy', params.content).fetch()
-    const policy = doc.content
-
-    console.log(policy)
-    return {
-      policy,
+  async asyncData({ $content, error }) {
+    let policy
+    let doc
+    try {
+      policy = await $content('policies/privacy-policy').fetch()
+      doc = policy.body
+    } catch (e) {
+      error({ message: 'Policy not found' })
     }
+    console.log(doc)
+    return { doc }
   },
 }
 </script>

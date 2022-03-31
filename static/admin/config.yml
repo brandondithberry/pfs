@@ -115,14 +115,14 @@ collections:
     files:
       - label: 'Privacy Policy'
         name: 'privacypolicy'
-        format: 'json'
-        file: 'content/policies/privacy-policy.json'
+        format: 'md'
+        file: 'content/policies/privacy-policy.md'
         fields:
           - { label: 'Body', name: 'body', widget: 'markdown', required: true }
       - label: 'Terms of Service'
         name: 'termsofservices'
-        format: 'json'
-        file: 'content/policies/terms-of-service.json'
+        format: 'md'
+        file: 'content/policies/terms-of-service.md'
         fields:
           - { label: 'Body', name: 'body', widget: 'markdown', required: true }
   - label: 'Settings'
