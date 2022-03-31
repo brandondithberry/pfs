@@ -94,6 +94,7 @@ collections:
     files:
       - label: 'Content'
         name: 'content'
+        format: 'json'
         file: 'content/about/content.json'
         fields:
           - { label: Title, name: title, widget: string, required: true }
@@ -114,12 +115,14 @@ collections:
     files:
       - label: 'Privacy Policy'
         name: 'privacypolicy'
-        file: 'content/policies/privacy-policy.md'
+        format: 'yml'
+        file: 'content/policies/privacy-policy.yml'
         fields:
           - { label: 'Content', name: 'content', widget: 'markdown', required: true }
       - label: 'Terms of Service'
         name: 'termsofservices'
-        file: 'content/policies/terms-of-service.md'
+        format: 'yml'
+        file: 'content/policies/terms-of-service.yml'
         fields:
           - { label: 'Content', name: 'content', widget: 'markdown', required: true }
   - label: 'Settings'

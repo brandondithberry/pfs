@@ -3,19 +3,20 @@
     <section>
       <h1>Terms of Service</h1>
       <div>
-        <nuxt-content :document="content" />
+        <nuxt-content :document="policy" />
       </div>
     </section>
   </main>
 </template>
 
 <script>
-import * as terms from '~/content/policies/terms-of-service.json'
-
 export default {
-  data() {
+  async asyncData({ $content }) {
+    const policy = await $content('policies/terms-of-service').only('content').fetch()
+
+    console.log(policy)
     return {
-      content: terms.content,
+      policy,
     }
   },
 }
