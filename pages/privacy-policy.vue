@@ -1,7 +1,7 @@
 <template>
   <main>
     <h1>Privacy Policy</h1>
-    <nuxt-content :document="doc" />
+    <nuxt-content :document="policy" />
   </main>
 </template>
 
@@ -11,13 +11,13 @@ export default {
     let policy
     let doc
     try {
-      policy = await $content('policies/privacy-policy').fetch()
-      doc = policy.body
+      doc = await $content('policies/privacy-policy').fetch()
+      policy = doc.body
     } catch (e) {
       error({ message: 'Policy not found' })
     }
-    console.log(doc)
-    return { doc }
+    console.log(policy)
+    return { policy }
   },
 }
 </script>

@@ -1,23 +1,23 @@
 <template>
   <main>
-    <section>
-      <h1>Terms of Service</h1>
-      <div>
-        <nuxt-content :document="policy" />
-      </div>
-    </section>
+    <h1>Privacy Policy</h1>
+    <nuxt-content :document="policy" />
   </main>
 </template>
 
 <script>
 export default {
-  async asyncData({ $content }) {
-    const policy = await $content('policies/terms-of-service').only('content').fetch()
-
-    console.log(policy)
-    return {
-      policy,
+  async asyncData({ $content, error }) {
+    let policy
+    let doc
+    try {
+      doc = await $content('policies/terms-of-service').fetch()
+      policy = doc.body
+    } catch (e) {
+      error({ message: 'Policy not found' })
     }
+    console.log(policy)
+    return { policy }
   },
 }
 </script>
