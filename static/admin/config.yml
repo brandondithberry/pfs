@@ -115,16 +115,16 @@ collections:
     files:
       - label: 'Privacy Policy'
         name: 'privacypolicy'
-        format: 'yml'
-        file: 'content/policies/privacy-policy.yml'
+        format: 'json'
+        file: 'content/policies/privacy-policy.json'
         fields:
-          - { label: 'Content', name: 'content', widget: 'markdown', required: true }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: true }
       - label: 'Terms of Service'
         name: 'termsofservices'
-        format: 'yml'
-        file: 'content/policies/terms-of-service.yml'
+        format: 'json'
+        file: 'content/policies/terms-of-service.json'
         fields:
-          - { label: 'Content', name: 'content', widget: 'markdown', required: true }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: true }
   - label: 'Settings'
     name: 'settings'
     files:
