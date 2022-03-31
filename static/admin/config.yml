@@ -119,7 +119,7 @@ collections:
           - { label: 'Content', name: 'content', widget: 'markdown', required: true }
       - label: 'Terms of Service'
         name: 'termsofservices'
-        file: 'content/policies/terms-of-service.json'
+        file: 'content/policies/terms-of-service.md'
         fields:
           - { label: 'Content', name: 'content', widget: 'markdown', required: true }
   - label: 'Settings'
